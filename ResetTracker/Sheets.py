@@ -208,19 +208,19 @@ def main():
                 print(e)
 
         live = True
-        print("Finished authorizing, will update sheet every 30 seconds")
-        while live:
-            if pushedLines <= 1:
-                push_data()
-                if pushedLines > 1:
-                    initialize_session()
-            else:
-                temp = pushedLines
-                push_data()
-                if pushedLines > temp:
-                    # print("Updating session")
-                    update_session()
-            time.sleep(30)
+        print("Will not update gsheets because it sucks")
+        # while live:
+        #     if pushedLines <= 1:
+        #         push_data()
+        #         if pushedLines > 1:
+        #             initialize_session()
+        #     else:
+        #         temp = pushedLines
+        #         push_data()
+        #         if pushedLines > temp:
+        #             # print("Updating session")
+        #             update_session()
+        #     time.sleep(30)
     except Exception as e:
         print(e)
         input("")
